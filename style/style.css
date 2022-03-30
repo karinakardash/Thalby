@@ -53,9 +53,8 @@
 }
 .header__sm{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: flex-end;
-    width:492px;
 }
 .header__icon:first-child{
     width: 21px;
@@ -174,14 +173,22 @@
     margin-right: 0;
 }
 .bestseller__image{
-    height: 422px;
+    position: relative;
     overflow: hidden;
     margin-bottom:27px;
+}
+.bestseller__image::before{
+    content: "";
+    display: block;
+    padding-top: 135%;
 }
 .bestseller__image img{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .bestseller__name{
     font-weight: 700;
@@ -212,6 +219,7 @@
 }
 .people__container{
     display: flex;
+    align-items: center;
 }
 .people__image{
     width:385px;
@@ -225,7 +233,6 @@
     object-fit: cover;
 }
 .people__desc{
-    padding: 70px 0px 70px;
     width: calc(100% - 385px - 50px);
 }
 .people__title{
@@ -253,6 +260,7 @@
 }
 .culture__container{
     display: flex;
+    align-items: center;
 }
 .culture__image{
     width:385px;
@@ -298,6 +306,7 @@
 }
 .power__container{
     display: flex;
+    align-items: center;
 }
 .power__image{
     width:385px;
@@ -311,7 +320,6 @@
     object-fit: cover;
 }
 .power__desc{
-    padding: 92px 0px 57px;
     width: calc(100% - 385px - 50px);
 }
 .power__title{
@@ -466,11 +474,19 @@
     margin-right:0;
 }
 .interview__photo{
-    height: 351px;
+    position: relative;
     overflow: hidden;
     margin-bottom: 35px;
 }
+.interview__photo::before{
+    content: "";
+    display: block;
+    padding-top: 122%;
+}
 .interview__photo img{
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100%;
     width:100%;
     object-fit: cover;
@@ -653,4 +669,122 @@
     font-weight: 400;
     text-align: center;
     color:#ffffff;  
+}
+
+@media (max-width: 1024px){
+.header__link{
+    width: 100%;
+    min-width: 70px;
+}
+.header__link a{
+    font-size: 14px;
+    line-height: 20px;
+}
+.header__logo{
+    width:70px;
+}
+.main{
+    padding:9px 0 18px;
+}
+.main__description{
+    padding: 70px 0 50px;
+    margin-right:38px;
+    width:calc(100% - 471px - 38px)
+}
+.bestseller{
+    padding: 60px 0 108px;
+}
+.bestseller__column{
+   margin-right: 32px;
+   width: calc((100% - 32px - 32px)/3); 
+}
+.people{
+    padding:56px 0 43px;
+}
+.people__image{
+    width:385px;
+    height: 525px;
+    overflow: hidden;
+    margin-right: 30px;
+}
+.people__image img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+.people__desc{
+    width: calc(100% - 385px - 30px);
+}
+.people__title{
+    font-size: 32px;
+    line-height: 38px;
+}
+.people__text{
+    font-size: 32px;
+    line-height: 38px;
+}
+.culture{
+    padding:56px 0 43px;
+}
+.culture__desc{
+    width: calc(100% - 385px - 30px);
+    margin-right:50px;
+}
+.culture__title{
+    font-size: 32px;
+    line-height: 38px;
+}
+.culture__text{
+    font-size: 32px;
+    line-height: 38px;
+    padding-left: 16px;
+}
+.power{
+    padding:56px 0 32px;
+}
+.power__image{
+    margin-right: 30px;
+}
+.power__desc{
+    width: calc(100% - 385px - 30px);
+}
+.power__title{
+    font-size: 32px;
+    line-height: 38px;
+}
+.power__text{
+    font-size: 32px;
+    line-height: 38px;
+}
+.advantages{
+    padding: 100px 0 163px;
+}
+.advantages__text{
+    font-size: 24px;
+    line-height: 26px;
+    margin-bottom: 180px;
+    width: calc((100% - 120px - 120px) / 3);
+    margin-right: 120px;
+}
+.interview__item {
+    margin-right: 65px;
+    width: calc((100% - 65px - 65px) / 3);
+}
+.interview__title{
+    font-size: 32px;
+    line-height: 38px;
+}
+.interview__text{
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 40px;
+}
+.interview__name{
+    font-size: 16px;
+    line-height: 18px;
+}
+.interview__position{
+    font-size: 16px;
+    line-height: 18px;
+}
 }
