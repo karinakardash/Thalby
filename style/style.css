@@ -812,12 +812,13 @@
   .header__logo {
     margin: 0 auto 10px;
   }
-  .main {
-    background-color: #f0efeb;
-    padding: 9px 0 24px;
+  .main__title {
+    font-size: 48px;
+    line-height: 52px;
   }
-  .main__container {
-    display: block;
+  .main__text {
+    font-size: 22px;
+    line-height: 24px;
   }
   .main__description {
     padding: 0;
@@ -825,7 +826,8 @@
     width: 100%;
   }
   .main__image {
-    display: none;
+    width: 300px;
+    height: 260px;
   }
   .bestseller__box {
     display: block;
@@ -838,7 +840,10 @@
   .bestseller__column:last-child {
     margin-bottom: 0;
   }
-
+  .bestseller__image {
+    max-width: 350px;
+    margin: 0 auto 27px;
+  }
   .bestseller__name {
     max-width: 280px;
   }
@@ -866,6 +871,7 @@
     font-size: 22px;
     line-height: 24px;
     margin-bottom: 30px;
+    max-width: 100%;
   }
   .culture {
     padding: 30px 0;
@@ -918,6 +924,7 @@
     font-size: 22px;
     line-height: 24px;
     margin-bottom: 30px;
+    max-width: 100%;
   }
   .advantages {
     padding: 80px 0;
@@ -930,7 +937,7 @@
   .advantages__text {
     font-size: 16px;
     line-height: 18px;
-    margin-bottom: 156px;
+    margin-bottom: 176px;
     width: calc((100% - 15px - 15px) / 3);
     margin-right: 15px;
   }
@@ -941,6 +948,10 @@
     font-size: 25px;
     line-height: 28px;
     margin-bottom: 52px;
+  }
+  .interview__photo {
+    max-width: 400px;
+    margin: 0 auto 35px;
   }
   .interview__box {
     display: block;
@@ -987,7 +998,8 @@
   .footer__sm {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
+    max-width: 320px;
+    margin: 0 auto 30px;
   }
   .footer__menu {
     display: flex;
@@ -998,5 +1010,23 @@
   }
   .footer__about {
     margin-right: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .main {
+    background-color: #f0efeb;
+    padding: 9px 0 24px;
+  }
+  .main__container {
+    display: block;
+  }
+  .main__description {
+    padding: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+  .main__image {
+    display: none;
   }
 }
